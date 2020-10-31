@@ -8,8 +8,9 @@ namespace Entidades
 {
     public class Servicios
     {
-        public int ServicioID { get; set; }
-        public string ServicioNombre { get; set; }
-        public string ServicioDesc { get; set; }
+        public string Nombre { get; set; }
+        public string Duracion { get; set; }
+        public decimal Valor { get; set; }
+        public int ID_Turno { get; set; }
     }
 }

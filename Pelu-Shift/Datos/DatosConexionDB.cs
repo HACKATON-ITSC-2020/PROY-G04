@@ -12,7 +12,7 @@ namespace Datos
     public class DatosConexionDB
     {
         public SqlConnection cn;
-        public string CadenaConexion = @"Data Source=.;Initial Catalog=TurnoPelu;Integrated Security=True";
+        public string CadenaConexion = @"Data Source=.;Initial Catalog=Peluqueria;Integrated Security=True";
 
         public DatosConexionDB()
         {
