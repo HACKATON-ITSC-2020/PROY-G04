@@ -12,17 +12,13 @@ namespace Negocios
 {
     public class NegCliente
     {
-        private DatosConexionDB datosConexionDB;
-        public NegCliente()
-        {
-            datosConexionDB = new DatosConexionDB();
-        }
+        private DatosCliente datosCliente = new DatosCliente();
 
-        public Cliente SaveCliente (Cliente cliente)
+        public Cliente SaveCliente(Cliente cliente)
         {
             if (cliente.Nombre == "")
             {
-                datosConexionDB.AltaCliente(cliente);
+                datosCliente.AltaCliente(cliente);
             }
 
             return cliente;
