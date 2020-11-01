@@ -20,6 +20,10 @@ namespace Datos
 
                 SqlParameter nombre = new SqlParameter("@Nombre", cliente.Nombre);
 
+                SqlCommand command = new SqlCommand(query, cn);
+                command.Parameters.Add(nombre);
+                command.ExecuteNonQuery();
+
             }
             catch (Exception)
             {
