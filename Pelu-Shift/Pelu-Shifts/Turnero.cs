@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,14 +27,19 @@ namespace Pelu_Shifts
 
         public Turnero()
         {
+
             InitializeComponent();
             lista.Columns.Add("Turno", typeof(int));
             lista.Columns.Add("Servicio", typeof(string));
             lista.Columns.Add("Precio", typeof(string));
-            lista.Columns.Add("Horario", typeof(string));
+            lista.Columns.Add("Cliente", typeof(string));
+            lista.Columns.Add("Días", typeof(string));
+            lista.Columns.Add("Horarios", typeof(string));
             lista.Columns.Add("Peluquero", typeof(string));
 
             dg.DataSource = lista;
+
+            
         }
 
 
@@ -45,21 +51,15 @@ namespace Pelu_Shifts
         private void button1_Click(object sender, EventArgs e) // boton de reservar turno
         {
 
-            turno = turno + 1;
-
-            lista.Rows.Add();
-
-            lista.Rows[lista.Rows.Count - 1]["Turno"] = turno;
-            lista.Rows[lista.Rows.Count - 1]["Servicio"] = txtservicios.Text;
-            lista.Rows[lista.Rows.Count - 1]["Horario"] = txthorarios.Text;
-
-            Precio();
+            
             Peluquero();
 
-            txthorarios.Items.Remove(txthorarios.Text);
-            dg.DataSource = lista;
+            ControlTxt();
+           
 
         }
+
+       
 
         private void button2_Click(object sender, EventArgs e) // boton de salir 
         {
@@ -74,18 +74,79 @@ namespace Pelu_Shifts
 
         private void Peluquero()
         {
-            if (txthorarios.Text.Trim() == "Martes: 9:00hs" || txthorarios.Text.Trim() == "Martes: 12:00hs" || txthorarios.Text.Trim() == "Martes: 17:00hs" || txthorarios.Text.Trim() == "Martes: 20:00hs" || txthorarios.Text.Trim() == "Viernes: 9:00hs" || txthorarios.Text.Trim() == "Viernes: 12:00hs" || txthorarios.Text.Trim() == "Viernes: 17:00hs" || txthorarios.Text.Trim() == "Viernes: 20:00hs")
+            
+           
+           
+
+            if (txtDias.Text.Trim() == "martes" || txtDias.Text.Trim() == "viernes")
             {
-                lista.Rows[lista.Rows.Count - 1]["Peluquero"] = "Peluquero 2";
+
+                if (txthorarios.Text.Trim() == "9:00hs" || txthorarios.Text.Trim() == "12:00hs" || txthorarios.Text.Trim() == "17:00hs" || txthorarios.Text.Trim() == "20:00hs")
+                {
+                    ListayPrecio();
+                    lista.Rows[lista.Rows.Count - 1]["Peluquero"] = "Peluquero 2";
+                    
+;
+                }
+
+
             }
-            else if (txthorarios.Text.Trim() == "Miercoles: 9:00hs" || txthorarios.Text.Trim() == "Miercoles: 12:00hs" || txthorarios.Text.Trim() == "Miercoles: 17:00hs" || txthorarios.Text.Trim() == "Miercoles: 20:00hs" || txthorarios.Text.Trim() == "Jueves: 9:00hs" || txthorarios.Text.Trim() == "Jueves: 12:00hs" || txthorarios.Text.Trim() == "Jueves: 17:00hs" || txthorarios.Text.Trim() == "Jueves: 20:00hs")
+
+            else if (txtDias.Text.Trim() == "miercoles" || txtDias.Text.Trim() == "jueves")
             {
-                lista.Rows[lista.Rows.Count - 1]["Peluquero"] = "Peluqueria 1";
+
+                if (txthorarios.Text.Trim() == "9:00hs" || txthorarios.Text.Trim() == "12:00hs" || txthorarios.Text.Trim() == "17:00hs" || txthorarios.Text.Trim() == "20:00hs")
+                {
+                    ListayPrecio();
+                    lista.Rows[lista.Rows.Count - 1]["Peluquero"] = "Peluquero 1";
+
+                }
+
             }
+           
+            else if (txtDias.Text.Trim() == "sabado"&& txthorarios.Text.Trim() == "9:00hs" || txthorarios.Text.Trim() == "12:00hs")
+            {
+                ListayPrecio();
+                lista.Rows[lista.Rows.Count - 1]["Peluquero"] = "Dueño";
+
+                
+            }
+
+            else
+            {
+                MessageBox.Show("SOLO SE ATIENDE LOS SABADOS DE 9:00hs A 13:00hs");
+            }
+
+
+        }
+
+        private void ListayPrecio() // metodo que engloba: el metodo lista y el metodo precio
+        {
+            LISTA();
+            Precio();
         }
 
 
-        private void Precio()
+        private void LISTA() // metodo lista
+        {
+
+            turno = turno + 1;
+
+            lista.Rows.Add();
+
+            lista.Rows[lista.Rows.Count - 1]["Turno"] = turno;
+            lista.Rows[lista.Rows.Count - 1]["Servicio"] = txtservicios.Text;
+            lista.Rows[lista.Rows.Count - 1]["Días"] = txtDias.Text;
+            lista.Rows[lista.Rows.Count - 1]["Horarios"] = txthorarios.Text;
+            lista.Rows[lista.Rows.Count - 1]["Cliente"] = txtNombreCliente.Text;
+            dg.DataSource = lista;
+
+
+
+        }
+
+
+        private void Precio() // metodo precio
         {
             if (txtservicios.Text == "Corte de pelo")
             {
@@ -109,12 +170,25 @@ namespace Pelu_Shifts
             }
 
 
-           
+
+            
 
 
 
         }
+
+        private void ControlTxt() // este metodo es para controlar los txt
+        {
+            txtNombreCliente.Focus();
+            txtNombreCliente.Clear();
+            txtservicios.Text = "Servicios";
+            txtDias.Text = "Días";
+            txthorarios.Text = "Horarios";
+        }
+
+
         #endregion
+
 
     }
 
