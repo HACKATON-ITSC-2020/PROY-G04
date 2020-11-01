@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Datos
+namespace Entidades
 {
-    class DatosProductos : DatosConexionDB
+    public class Turno
     {
-
+        public string Dia { get; set; }
+        public string Horario { get; set; }
     }
 }

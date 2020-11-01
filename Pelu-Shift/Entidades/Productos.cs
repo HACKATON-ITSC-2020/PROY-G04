@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Productos
+    public class Producto
     {
-        public string ProductoNombre { get; set; }
-        public string ProductoDesc { get; set; }
-
+        public string Nombre { get; set; }
     }
 }

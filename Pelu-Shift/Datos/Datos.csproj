@@ -43,11 +43,10 @@
     <Reference Include="Microsoft.Analytics.Types" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatosCliente.cs" />
     <Compile Include="DatosConexionDB.cs" />
-    <Compile Include="DatosProductos.cs" />
+    <Compile Include="DatosTurno.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DatosServicios.cs" />
-    <Compile Include="Usan.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Usan
+    public class Peluquero
     {
-        public int ProductoID { get; set; }
-        public int ServicioID { get; set; }
+        public string Nombre { get; set; }
+        public string Dia { get; set; }
+        public string Horario { get; set; }
     }
 }
