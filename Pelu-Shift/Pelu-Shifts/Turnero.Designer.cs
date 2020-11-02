@@ -52,10 +52,14 @@
             this.cmbDias = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dg
@@ -65,10 +69,10 @@
             this.dg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg.GridColor = System.Drawing.Color.LightGray;
-            this.dg.Location = new System.Drawing.Point(360, 91);
+            this.dg.Location = new System.Drawing.Point(307, 91);
             this.dg.Name = "dg";
             this.dg.ReadOnly = true;
-            this.dg.Size = new System.Drawing.Size(748, 324);
+            this.dg.Size = new System.Drawing.Size(801, 367);
             this.dg.TabIndex = 5;
             // 
             // label4
@@ -107,7 +111,7 @@
             "Alisado",
             "Lavado + Tintura",
             "Lavado + Brushing"});
-            this.cmbServicios.Location = new System.Drawing.Point(510, 504);
+            this.cmbServicios.Location = new System.Drawing.Point(456, 521);
             this.cmbServicios.Name = "cmbServicios";
             this.cmbServicios.Size = new System.Drawing.Size(121, 24);
             this.cmbServicios.TabIndex = 2;
@@ -119,7 +123,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(668, 461);
+            this.label1.Location = new System.Drawing.Point(614, 478);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 32);
             this.label1.TabIndex = 1;
@@ -137,7 +141,7 @@
             "17:00hs ",
             "20:00hs ",
             ""});
-            this.cmbHorarios.Location = new System.Drawing.Point(789, 504);
+            this.cmbHorarios.Location = new System.Drawing.Point(735, 521);
             this.cmbHorarios.Name = "cmbHorarios";
             this.cmbHorarios.Size = new System.Drawing.Size(146, 24);
             this.cmbHorarios.TabIndex = 0;
@@ -150,7 +154,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(521, 461);
+            this.label2.Location = new System.Drawing.Point(467, 478);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 32);
             this.label2.TabIndex = 3;
@@ -165,7 +169,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(957, 461);
+            this.button1.Location = new System.Drawing.Point(903, 478);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 66);
             this.button1.TabIndex = 4;
@@ -179,9 +183,9 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label4);
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(360, 8);
+            this.panel1.Location = new System.Drawing.Point(310, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(748, 77);
+            this.panel1.Size = new System.Drawing.Size(798, 77);
             this.panel1.TabIndex = 9;
             // 
             // pictureBox1
@@ -283,7 +287,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(1073, 461);
+            this.button2.Location = new System.Drawing.Point(1019, 478);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(80, 66);
             this.button2.TabIndex = 18;
@@ -294,7 +298,7 @@
             // txtCliente
             // 
             this.txtCliente.BackColor = System.Drawing.Color.DimGray;
-            this.txtCliente.Location = new System.Drawing.Point(360, 508);
+            this.txtCliente.Location = new System.Drawing.Point(306, 525);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(140, 20);
             this.txtCliente.TabIndex = 1;
@@ -305,7 +309,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(388, 463);
+            this.label13.Location = new System.Drawing.Point(334, 480);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(89, 32);
             this.label13.TabIndex = 22;
@@ -323,7 +327,7 @@
             "jueves",
             "viernes",
             "sabado"});
-            this.cmbDias.Location = new System.Drawing.Point(645, 504);
+            this.cmbDias.Location = new System.Drawing.Point(591, 521);
             this.cmbDias.Name = "cmbDias";
             this.cmbDias.Size = new System.Drawing.Size(121, 24);
             this.cmbDias.TabIndex = 23;
@@ -335,7 +339,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(799, 461);
+            this.label12.Location = new System.Drawing.Point(745, 478);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(109, 32);
             this.label12.TabIndex = 24;
@@ -355,8 +359,42 @@
             this.panel2.ForeColor = System.Drawing.Color.Transparent;
             this.panel2.Location = new System.Drawing.Point(55, 232);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(246, 303);
+            this.panel2.Size = new System.Drawing.Size(246, 334);
             this.panel2.TabIndex = 25;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(11, 27);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(171, 28);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Productos a usar";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Teal;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.ForeColor = System.Drawing.Color.Transparent;
+            this.panel3.Location = new System.Drawing.Point(1114, 8);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(246, 558);
+            this.panel3.TabIndex = 26;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(16, 82);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(189, 468);
+            this.label14.TabIndex = 12;
+            this.label14.Text = resources.GetString("label14.Text");
             // 
             // Turnero
             // 
@@ -364,7 +402,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1165, 553);
+            this.ClientSize = new System.Drawing.Size(1424, 578);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cmbDias);
             this.Controls.Add(this.label13);
@@ -391,6 +430,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,6 +461,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cmbHorarios;
         private System.Windows.Forms.ComboBox cmbDias;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label14;
     }
 }
 

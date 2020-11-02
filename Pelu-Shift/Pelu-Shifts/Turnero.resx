@@ -386,6 +386,45 @@
         qGLMGcA/7AAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Lavado:
+              Shampoo
+              Acondicionador
+
+Corte:
+           Aceite de coco o Gel
+
+Brushing: 
+                 Fijador
+                 Cera para el pelo
+
+Peinados: 
+                 Aceite de coco
+                 Fijador
+                 Shampoo
+                 Acondicionador
+
+Alisado: 
+              Shampoo
+              Acondicionador
+              Keratina
+
+Lavado + Tintura: 
+                              Shampoo
+                              Acondicionador
+                              Decolorante
+                              Agua Oxigenada
+                              Acondicionador
+                              Tintura 
+
+Lavado + Brushing: 
+                                  Shampoo
+                                  Acondicionador
+                                  Fijador
+                                  Cera para el pelo
+
+</value>
+  </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/4QCqRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAZKG
