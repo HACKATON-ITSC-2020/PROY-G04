@@ -10,16 +10,12 @@ namespace Negocios
 {
     public class NegTurno
     {
-        private  DatosTurno datosTurno = new DatosTurno();
+        DatosTurno datosTurno = new DatosTurno();
 
-        public Turno SaveTurno(Turno turno)
+        public int abmTurno(Turno objTurno)
         {
-            if (turno.Dia == "")
-            {
-                datosTurno.AltaTurno(turno);
-            }
-
-            return turno;
+            return datosTurno.AltaTurno(objTurno);
         }
+
     }
 }

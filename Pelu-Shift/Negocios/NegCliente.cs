@@ -12,16 +12,11 @@ namespace Negocios
 {
     public class NegCliente
     {
-        private DatosCliente datosCliente = new DatosCliente();
+        DatosCliente datosCliente = new DatosCliente();
 
-        public Cliente SaveCliente(Cliente cliente)
+        public int abmCliente(Cliente objCliente)
         {
-            if (cliente.Nombre == "")
-            {
-                datosCliente.AltaCliente(cliente);
-            }
-
-            return cliente;
+            return datosCliente.AltaCliente(objCliente);
         }
     }
 }

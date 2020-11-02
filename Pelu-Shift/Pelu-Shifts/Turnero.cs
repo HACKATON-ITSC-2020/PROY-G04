@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocios;
+using Entidades;
 
 namespace Pelu_Shifts
 {
@@ -17,11 +20,13 @@ namespace Pelu_Shifts
 
         DataTable lista = new DataTable();
         int turno = 0;
-
+        public Turno objTurno = new Turno();
+        public Cliente objCliente = new Cliente();
 
         #endregion
 
-
+        public Negocios.NegTurno objNegTurno = new Negocios.NegTurno();
+        public Negocios.NegCliente objNegCliente = new Negocios.NegCliente();
 
         #region Constructor
 
@@ -49,17 +54,23 @@ namespace Pelu_Shifts
         #region eventos
 
         private void button1_Click(object sender, EventArgs e) // boton de reservar turno
-        {
+        {   
+            objTurno.Dia = cmbDias.SelectedItem.ToString();
+            objTurno.Horario = cmbHorarios.SelectedItem.ToString();
 
-            
+            objCliente.Nombre = txtCliente.Text;
+
+            objNegTurno.abmTurno(objTurno);
+            objNegCliente.abmCliente(objCliente);
+
+            Turno turno = new Turno();
+            turno.Dia = cmbDias.Text;
+            turno.Horario = cmbHorarios.Text;
+
             Peluquero();
-
             ControlTxt();
-           
-
         }
 
-       
 
         private void button2_Click(object sender, EventArgs e) // boton de salir 
         {
@@ -74,14 +85,10 @@ namespace Pelu_Shifts
 
         private void Peluquero()
         {
-            
-           
-           
-
-            if (txtDias.Text.Trim() == "martes" || txtDias.Text.Trim() == "viernes")
+            if (cmbDias.Text.Trim() == "martes" || cmbDias.Text.Trim() == "viernes")
             {
 
-                if (txthorarios.Text.Trim() == "9:00hs" || txthorarios.Text.Trim() == "12:00hs" || txthorarios.Text.Trim() == "17:00hs" || txthorarios.Text.Trim() == "20:00hs")
+                if (cmbHorarios.Text.Trim() == "9:00hs" || cmbHorarios.Text.Trim() == "12:00hs" || cmbHorarios.Text.Trim() == "17:00hs" || cmbHorarios.Text.Trim() == "20:00hs")
                 {
                     ListayPrecio();
                     lista.Rows[lista.Rows.Count - 1]["Peluquero"] = "Peluquero 2";
@@ -92,10 +99,10 @@ namespace Pelu_Shifts
 
             }
 
-            else if (txtDias.Text.Trim() == "miercoles" || txtDias.Text.Trim() == "jueves")
+            else if (cmbDias.Text.Trim() == "miercoles" || cmbDias.Text.Trim() == "jueves")
             {
 
-                if (txthorarios.Text.Trim() == "9:00hs" || txthorarios.Text.Trim() == "12:00hs" || txthorarios.Text.Trim() == "17:00hs" || txthorarios.Text.Trim() == "20:00hs")
+                if (cmbHorarios.Text.Trim() == "9:00hs" || cmbHorarios.Text.Trim() == "12:00hs" || cmbHorarios.Text.Trim() == "17:00hs" || cmbHorarios.Text.Trim() == "20:00hs")
                 {
                     ListayPrecio();
                     lista.Rows[lista.Rows.Count - 1]["Peluquero"] = "Peluquero 1";
@@ -104,7 +111,7 @@ namespace Pelu_Shifts
 
             }
            
-            else if (txtDias.Text.Trim() == "sabado"&& txthorarios.Text.Trim() == "9:00hs" || txthorarios.Text.Trim() == "12:00hs")
+            else if (cmbDias.Text.Trim() == "sabado"&& cmbHorarios.Text.Trim() == "9:00hs" || cmbHorarios.Text.Trim() == "12:00hs")
             {
                 ListayPrecio();
                 lista.Rows[lista.Rows.Count - 1]["Peluquero"] = "Dueño";
@@ -135,10 +142,10 @@ namespace Pelu_Shifts
             lista.Rows.Add();
 
             lista.Rows[lista.Rows.Count - 1]["Turno"] = turno;
-            lista.Rows[lista.Rows.Count - 1]["Servicio"] = txtservicios.Text;
-            lista.Rows[lista.Rows.Count - 1]["Días"] = txtDias.Text;
-            lista.Rows[lista.Rows.Count - 1]["Horarios"] = txthorarios.Text;
-            lista.Rows[lista.Rows.Count - 1]["Cliente"] = txtNombreCliente.Text;
+            lista.Rows[lista.Rows.Count - 1]["Servicio"] = cmbServicios.Text;
+            lista.Rows[lista.Rows.Count - 1]["Días"] = cmbDias.Text;
+            lista.Rows[lista.Rows.Count - 1]["Horarios"] = cmbHorarios.Text;
+            lista.Rows[lista.Rows.Count - 1]["Cliente"] = txtCliente.Text;
             dg.DataSource = lista;
 
 
@@ -148,50 +155,37 @@ namespace Pelu_Shifts
 
         private void Precio() // metodo precio
         {
-            if (txtservicios.Text == "Corte de pelo")
+            if (cmbServicios.Text == "Corte de pelo")
             {
                 lista.Rows[lista.Rows.Count - 1]["Precio"] = "$300";
             }
-            else if (txtservicios.Text == "Lavado + Tintura")
+            else if (cmbServicios.Text == "Lavado + Tintura")
             {
                 lista.Rows[lista.Rows.Count - 1]["Precio"] = "$600";
             }
-            else if (txtservicios.Text == "Peinados")
+            else if (cmbServicios.Text == "Peinados")
             {
                 lista.Rows[lista.Rows.Count - 1]["Precio"] = "$800";
             }
-            else if (txtservicios.Text == "Alisado")
+            else if (cmbServicios.Text == "Alisado")
             {
                 lista.Rows[lista.Rows.Count - 1]["Precio"] = "$3500";
             }
-            else if (txtservicios.Text == "Lavado + Brushing")
+            else if (cmbServicios.Text == "Lavado + Brushing")
             {
                 lista.Rows[lista.Rows.Count - 1]["Precio"] = "$500";
             }
-
-
-
-            
-
-
-
         }
 
         private void ControlTxt() // este metodo es para controlar los txt
         {
-            txtNombreCliente.Focus();
-            txtNombreCliente.Clear();
-            txtservicios.Text = "Servicios";
-            txtDias.Text = "Días";
-            txthorarios.Text = "Horarios";
+            txtCliente.Focus();
+            txtCliente.Clear();
+            cmbServicios.Text = "Servicios";
+            cmbDias.Text = "Días";
+            cmbHorarios.Text = "Horarios";
         }
 
-
         #endregion
-
-
     }
-
-
-
 }

@@ -32,9 +32,9 @@
             this.dg = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtservicios = new System.Windows.Forms.ComboBox();
+            this.cmbServicios = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txthorarios = new System.Windows.Forms.ComboBox();
+            this.cmbHorarios = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -47,9 +47,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.txtCliente = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtDias = new System.Windows.Forms.ComboBox();
+            this.cmbDias = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
@@ -95,24 +95,24 @@
             this.label3.Size = new System.Drawing.Size(0, 21);
             this.label3.TabIndex = 6;
             // 
-            // txtservicios
+            // cmbServicios
             // 
-            this.txtservicios.BackColor = System.Drawing.Color.DimGray;
-            this.txtservicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtservicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtservicios.FormattingEnabled = true;
-            this.txtservicios.Items.AddRange(new object[] {
+            this.cmbServicios.BackColor = System.Drawing.Color.DimGray;
+            this.cmbServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbServicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbServicios.FormattingEnabled = true;
+            this.cmbServicios.Items.AddRange(new object[] {
             "Corte de pelo",
             "Peinados",
             "Alisado",
             "Lavado + Tintura",
             "Lavado + Brushing"});
-            this.txtservicios.Location = new System.Drawing.Point(510, 504);
-            this.txtservicios.Name = "txtservicios";
-            this.txtservicios.Size = new System.Drawing.Size(121, 24);
-            this.txtservicios.TabIndex = 2;
-            this.txtservicios.TabStop = false;
-            this.txtservicios.Text = "Servicios";
+            this.cmbServicios.Location = new System.Drawing.Point(510, 504);
+            this.cmbServicios.Name = "cmbServicios";
+            this.cmbServicios.Size = new System.Drawing.Size(121, 24);
+            this.cmbServicios.TabIndex = 2;
+            this.cmbServicios.TabStop = false;
+            this.cmbServicios.Text = "Servicios";
             // 
             // label1
             // 
@@ -125,24 +125,24 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Dias";
             // 
-            // txthorarios
+            // cmbHorarios
             // 
-            this.txthorarios.BackColor = System.Drawing.Color.DimGray;
-            this.txthorarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txthorarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txthorarios.FormattingEnabled = true;
-            this.txthorarios.Items.AddRange(new object[] {
+            this.cmbHorarios.BackColor = System.Drawing.Color.DimGray;
+            this.cmbHorarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbHorarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbHorarios.FormattingEnabled = true;
+            this.cmbHorarios.Items.AddRange(new object[] {
             " 9:00hs ",
             "12:00hs",
             "17:00hs ",
             "20:00hs ",
             ""});
-            this.txthorarios.Location = new System.Drawing.Point(789, 504);
-            this.txthorarios.Name = "txthorarios";
-            this.txthorarios.Size = new System.Drawing.Size(146, 24);
-            this.txthorarios.TabIndex = 0;
-            this.txthorarios.TabStop = false;
-            this.txthorarios.Text = "Horarios";
+            this.cmbHorarios.Location = new System.Drawing.Point(789, 504);
+            this.cmbHorarios.Name = "cmbHorarios";
+            this.cmbHorarios.Size = new System.Drawing.Size(146, 24);
+            this.cmbHorarios.TabIndex = 0;
+            this.cmbHorarios.TabStop = false;
+            this.cmbHorarios.Text = "Horarios";
             // 
             // label2
             // 
@@ -291,13 +291,13 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txtNombreCliente
+            // txtCliente
             // 
-            this.txtNombreCliente.BackColor = System.Drawing.Color.DimGray;
-            this.txtNombreCliente.Location = new System.Drawing.Point(360, 508);
-            this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(140, 20);
-            this.txtNombreCliente.TabIndex = 1;
+            this.txtCliente.BackColor = System.Drawing.Color.DimGray;
+            this.txtCliente.Location = new System.Drawing.Point(360, 508);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Size = new System.Drawing.Size(140, 20);
+            this.txtCliente.TabIndex = 1;
             // 
             // label13
             // 
@@ -311,24 +311,24 @@
             this.label13.TabIndex = 22;
             this.label13.Text = "Cliente";
             // 
-            // txtDias
+            // cmbDias
             // 
-            this.txtDias.BackColor = System.Drawing.Color.DimGray;
-            this.txtDias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDias.FormattingEnabled = true;
-            this.txtDias.Items.AddRange(new object[] {
+            this.cmbDias.BackColor = System.Drawing.Color.DimGray;
+            this.cmbDias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDias.FormattingEnabled = true;
+            this.cmbDias.Items.AddRange(new object[] {
             "martes",
             "miercoles",
             "jueves",
             "viernes",
             "sabado"});
-            this.txtDias.Location = new System.Drawing.Point(645, 504);
-            this.txtDias.Name = "txtDias";
-            this.txtDias.Size = new System.Drawing.Size(121, 24);
-            this.txtDias.TabIndex = 23;
-            this.txtDias.TabStop = false;
-            this.txtDias.Text = "Días";
+            this.cmbDias.Location = new System.Drawing.Point(645, 504);
+            this.cmbDias.Name = "cmbDias";
+            this.cmbDias.Size = new System.Drawing.Size(121, 24);
+            this.cmbDias.TabIndex = 23;
+            this.cmbDias.TabStop = false;
+            this.cmbDias.Text = "Días";
             // 
             // label12
             // 
@@ -366,17 +366,17 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1165, 553);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtDias);
+            this.Controls.Add(this.cmbDias);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtNombreCliente);
+            this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txthorarios);
+            this.Controls.Add(this.cmbHorarios);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtservicios);
+            this.Controls.Add(this.cmbServicios);
             this.Controls.Add(this.dg);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -400,7 +400,7 @@
         private System.Windows.Forms.DataGridView dg;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox txtservicios;
+        private System.Windows.Forms.ComboBox cmbServicios;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
@@ -414,12 +414,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txtNombreCliente;
+        private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox txthorarios;
-        private System.Windows.Forms.ComboBox txtDias;
+        private System.Windows.Forms.ComboBox cmbHorarios;
+        private System.Windows.Forms.ComboBox cmbDias;
     }
 }
 

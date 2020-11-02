@@ -10,19 +10,17 @@ namespace Datos
 {
     public class DatosCliente : DatosConexionDB
     {
-        public void AltaCliente(Cliente cliente)
+        int resultado = -1;
+        public int AltaCliente(Cliente cliente)
         {
             try
             {
                 cn.Open();
-                string query = @"
-                               Insert into Cliente (Nombre) values (@Nombre)";
-
-                SqlParameter nombre = new SqlParameter("@Nombre", cliente.Nombre);
+                string query = @" Insert into Cliente (Nombre) values ('" + cliente.Nombre + "')";
 
                 SqlCommand command = new SqlCommand(query, cn);
-                command.Parameters.Add(nombre);
-                command.ExecuteNonQuery();
+
+                resultado = command.ExecuteNonQuery();
 
             }
             catch (Exception)
@@ -34,6 +32,8 @@ namespace Datos
             {
                 cn.Close();
             }
+
+            return resultado;
         }
     }
 }

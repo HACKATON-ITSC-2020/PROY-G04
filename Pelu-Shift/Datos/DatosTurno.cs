@@ -10,23 +10,18 @@ namespace Datos
 {
     public class DatosTurno : DatosConexionDB
     {
-        public void AltaTurno(Turno turno)
+        public int AltaTurno(Turno turno)
         {
+            int resultado = -1;
+
             try
             {
                 cn.Open();
-                string query = @"
-                               Insert into Turno (Dia, Horario) values (@Dia, @Horario)";
-
-                SqlParameter dia = new SqlParameter("@Dia", turno.Dia);
-                SqlParameter horario = new SqlParameter("@Horario", turno.Horario);
+                string query = @" Insert into Turno (Dia, Horario) values ('" + turno.Dia + "','" + turno.Horario + "')";
 
                 SqlCommand command = new SqlCommand(query, cn);
 
-                command.Parameters.Add(dia);
-                command.Parameters.Add(horario);
-
-                command.ExecuteNonQuery();
+                resultado = command.ExecuteNonQuery();
             }
             catch (Exception)
             {
@@ -37,6 +32,7 @@ namespace Datos
             {
                 cn.Close();
             }
+            return resultado;
         }
     }
 }
