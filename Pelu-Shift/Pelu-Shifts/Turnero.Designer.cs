@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbHorarios = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtReservar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -111,7 +111,7 @@
             "Alisado",
             "Lavado + Tintura",
             "Lavado + Brushing"});
-            this.cmbServicios.Location = new System.Drawing.Point(456, 521);
+            this.cmbServicios.Location = new System.Drawing.Point(503, 524);
             this.cmbServicios.Name = "cmbServicios";
             this.cmbServicios.Size = new System.Drawing.Size(121, 24);
             this.cmbServicios.TabIndex = 2;
@@ -123,7 +123,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(614, 478);
+            this.label1.Location = new System.Drawing.Point(661, 481);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 32);
             this.label1.TabIndex = 1;
@@ -141,7 +141,7 @@
             "17:00hs ",
             "20:00hs ",
             ""});
-            this.cmbHorarios.Location = new System.Drawing.Point(735, 521);
+            this.cmbHorarios.Location = new System.Drawing.Point(782, 524);
             this.cmbHorarios.Name = "cmbHorarios";
             this.cmbHorarios.Size = new System.Drawing.Size(146, 24);
             this.cmbHorarios.TabIndex = 0;
@@ -154,28 +154,28 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(467, 478);
+            this.label2.Location = new System.Drawing.Point(514, 481);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 32);
             this.label2.TabIndex = 3;
             this.label2.Text = "Servicios";
             // 
-            // button1
+            // BtReservar
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(903, 478);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 66);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Reservar Turno";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtReservar.BackColor = System.Drawing.Color.Black;
+            this.BtReservar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.BtReservar.FlatAppearance.BorderSize = 3;
+            this.BtReservar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtReservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtReservar.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtReservar.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtReservar.Location = new System.Drawing.Point(950, 481);
+            this.BtReservar.Name = "BtReservar";
+            this.BtReservar.Size = new System.Drawing.Size(87, 66);
+            this.BtReservar.TabIndex = 4;
+            this.BtReservar.Text = "Reservar Turno";
+            this.BtReservar.UseVisualStyleBackColor = false;
+            this.BtReservar.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -192,9 +192,9 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(57, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(57, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(244, 211);
+            this.pictureBox1.Size = new System.Drawing.Size(244, 218);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -287,18 +287,18 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(1019, 478);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(1366, 8);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 66);
+            this.button2.Size = new System.Drawing.Size(51, 48);
             this.button2.TabIndex = 18;
-            this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtCliente
             // 
             this.txtCliente.BackColor = System.Drawing.Color.DimGray;
-            this.txtCliente.Location = new System.Drawing.Point(306, 525);
+            this.txtCliente.Location = new System.Drawing.Point(353, 528);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(140, 20);
             this.txtCliente.TabIndex = 1;
@@ -309,7 +309,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(334, 480);
+            this.label13.Location = new System.Drawing.Point(381, 483);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(89, 32);
             this.label13.TabIndex = 22;
@@ -327,7 +327,7 @@
             "jueves",
             "viernes",
             "sabado"});
-            this.cmbDias.Location = new System.Drawing.Point(591, 521);
+            this.cmbDias.Location = new System.Drawing.Point(638, 524);
             this.cmbDias.Name = "cmbDias";
             this.cmbDias.Size = new System.Drawing.Size(121, 24);
             this.cmbDias.TabIndex = 23;
@@ -339,7 +339,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(745, 478);
+            this.label12.Location = new System.Drawing.Point(792, 481);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(109, 32);
             this.label12.TabIndex = 24;
@@ -402,7 +402,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1424, 578);
+            this.ClientSize = new System.Drawing.Size(1423, 578);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cmbDias);
@@ -410,7 +410,7 @@
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtReservar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbHorarios);
             this.Controls.Add(this.label2);
@@ -444,7 +444,7 @@
         private System.Windows.Forms.ComboBox cmbServicios;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtReservar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
