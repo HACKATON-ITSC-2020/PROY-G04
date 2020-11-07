@@ -44,7 +44,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.txtCliente = new System.Windows.Forms.TextBox();
@@ -55,6 +54,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,7 +74,7 @@
             this.dg.Location = new System.Drawing.Point(307, 91);
             this.dg.Name = "dg";
             this.dg.ReadOnly = true;
-            this.dg.Size = new System.Drawing.Size(801, 367);
+            this.dg.Size = new System.Drawing.Size(801, 213);
             this.dg.TabIndex = 5;
             // 
             // label4
@@ -111,9 +113,9 @@
             "Alisado",
             "Lavado + Tintura",
             "Lavado + Brushing"});
-            this.cmbServicios.Location = new System.Drawing.Point(503, 524);
+            this.cmbServicios.Location = new System.Drawing.Point(313, 445);
             this.cmbServicios.Name = "cmbServicios";
-            this.cmbServicios.Size = new System.Drawing.Size(121, 24);
+            this.cmbServicios.Size = new System.Drawing.Size(140, 24);
             this.cmbServicios.TabIndex = 2;
             this.cmbServicios.TabStop = false;
             this.cmbServicios.Text = "Servicios";
@@ -123,7 +125,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(661, 481);
+            this.label1.Location = new System.Drawing.Point(565, 315);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 32);
             this.label1.TabIndex = 1;
@@ -136,12 +138,19 @@
             this.cmbHorarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbHorarios.FormattingEnabled = true;
             this.cmbHorarios.Items.AddRange(new object[] {
-            " 9:00hs ",
-            "12:00hs",
+            "9:00hs ",
+            "10:00hs ",
+            "11:00hs ",
+            "13:00hs",
+            "14:00hs ",
+            "15:00hs ",
             "17:00hs ",
+            "18:00hs ",
+            "19:00hs ",
             "20:00hs ",
+            "",
             ""});
-            this.cmbHorarios.Location = new System.Drawing.Point(782, 524);
+            this.cmbHorarios.Location = new System.Drawing.Point(571, 445);
             this.cmbHorarios.Name = "cmbHorarios";
             this.cmbHorarios.Size = new System.Drawing.Size(146, 24);
             this.cmbHorarios.TabIndex = 0;
@@ -154,7 +163,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(514, 481);
+            this.label2.Location = new System.Drawing.Point(307, 402);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 32);
             this.label2.TabIndex = 3;
@@ -169,9 +178,9 @@
             this.BtReservar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtReservar.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtReservar.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtReservar.Location = new System.Drawing.Point(950, 481);
+            this.BtReservar.Location = new System.Drawing.Point(878, 315);
             this.BtReservar.Name = "BtReservar";
-            this.BtReservar.Size = new System.Drawing.Size(87, 66);
+            this.BtReservar.Size = new System.Drawing.Size(96, 66);
             this.BtReservar.TabIndex = 4;
             this.BtReservar.Text = "Reservar Turno";
             this.BtReservar.UseVisualStyleBackColor = false;
@@ -217,66 +226,55 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(70, 81);
+            this.label6.Location = new System.Drawing.Point(9, 81);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 16);
+            this.label6.Size = new System.Drawing.Size(74, 16);
             this.label6.TabIndex = 12;
-            this.label6.Text = "#Peluquero 1";
+            this.label6.Text = "Ana Luque";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(70, 114);
+            this.label7.Location = new System.Drawing.Point(9, 164);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 16);
+            this.label7.Size = new System.Drawing.Size(80, 16);
             this.label7.TabIndex = 13;
-            this.label7.Text = "#Peluquero 2";
+            this.label7.Text = "José Ramos";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(48, 154);
+            this.label8.Location = new System.Drawing.Point(9, 193);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(141, 16);
+            this.label8.Size = new System.Drawing.Size(111, 16);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Martes = peluquero 2";
+            this.label8.Text = "Martes y Viernes";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(13, 194);
+            this.label9.Location = new System.Drawing.Point(9, 107);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(210, 16);
+            this.label9.Size = new System.Drawing.Size(132, 16);
             this.label9.TabIndex = 15;
-            this.label9.Text = "Miercoles y Jueves= peluquero 1";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(44, 229);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(145, 16);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Viernes = peluquero 2";
+            this.label9.Text = "Miercoles y Jueves=";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(53, 273);
+            this.label11.Location = new System.Drawing.Point(9, 247);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(107, 16);
+            this.label11.Size = new System.Drawing.Size(77, 16);
             this.label11.TabIndex = 17;
-            this.label11.Text = "Sabado= Dueño";
+            this.label11.Text = "Lucia Perez";
             // 
             // button2
             // 
@@ -298,7 +296,7 @@
             // txtCliente
             // 
             this.txtCliente.BackColor = System.Drawing.Color.DimGray;
-            this.txtCliente.Location = new System.Drawing.Point(353, 528);
+            this.txtCliente.Location = new System.Drawing.Point(313, 362);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(140, 20);
             this.txtCliente.TabIndex = 1;
@@ -309,7 +307,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(381, 483);
+            this.label13.Location = new System.Drawing.Point(307, 315);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(89, 32);
             this.label13.TabIndex = 22;
@@ -327,9 +325,9 @@
             "jueves",
             "viernes",
             "sabado"});
-            this.cmbDias.Location = new System.Drawing.Point(638, 524);
+            this.cmbDias.Location = new System.Drawing.Point(571, 358);
             this.cmbDias.Name = "cmbDias";
-            this.cmbDias.Size = new System.Drawing.Size(121, 24);
+            this.cmbDias.Size = new System.Drawing.Size(146, 24);
             this.cmbDias.TabIndex = 23;
             this.cmbDias.TabStop = false;
             this.cmbDias.Text = "Días";
@@ -339,7 +337,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(792, 481);
+            this.label12.Location = new System.Drawing.Point(565, 402);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(109, 32);
             this.label12.TabIndex = 24;
@@ -349,13 +347,13 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Teal;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label10);
             this.panel2.ForeColor = System.Drawing.Color.Transparent;
             this.panel2.Location = new System.Drawing.Point(55, 232);
             this.panel2.Name = "panel2";
@@ -396,6 +394,49 @@
             this.label14.TabIndex = 12;
             this.label14.Text = resources.GetString("label14.Text");
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(878, 398);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 66);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Cancelar Turno";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.button3.FlatAppearance.BorderSize = 3;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(878, 481);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(96, 66);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "Modificar Turno";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(9, 271);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 16);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Sábado";
+            // 
             // Turnero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,6 +444,8 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1423, 578);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cmbDias);
@@ -452,7 +495,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtCliente;
@@ -464,6 +506,9 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }
 
