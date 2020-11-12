@@ -51,12 +51,12 @@
             this.cmbDias = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
+            this.BtCancelar = new System.Windows.Forms.Button();
+            this.btModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -139,16 +139,9 @@
             this.cmbHorarios.FormattingEnabled = true;
             this.cmbHorarios.Items.AddRange(new object[] {
             "9:00hs ",
-            "10:00hs ",
-            "11:00hs ",
-            "13:00hs",
-            "14:00hs ",
-            "15:00hs ",
+            "12:00hs ",
             "17:00hs ",
-            "18:00hs ",
-            "19:00hs ",
             "20:00hs ",
-            "",
             ""});
             this.cmbHorarios.Location = new System.Drawing.Point(571, 445);
             this.cmbHorarios.Name = "cmbHorarios";
@@ -360,6 +353,17 @@
             this.panel2.Size = new System.Drawing.Size(246, 334);
             this.panel2.TabIndex = 25;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(9, 271);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 16);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Sábado";
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -394,48 +398,39 @@
             this.label14.TabIndex = 12;
             this.label14.Text = resources.GetString("label14.Text");
             // 
-            // button1
+            // BtCancelar
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(878, 398);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 66);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Cancelar Turno";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtCancelar.BackColor = System.Drawing.Color.Black;
+            this.BtCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.BtCancelar.FlatAppearance.BorderSize = 3;
+            this.BtCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtCancelar.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtCancelar.Location = new System.Drawing.Point(878, 493);
+            this.BtCancelar.Name = "BtCancelar";
+            this.BtCancelar.Size = new System.Drawing.Size(96, 66);
+            this.BtCancelar.TabIndex = 27;
+            this.BtCancelar.Text = "Cancelar Turno";
+            this.BtCancelar.UseVisualStyleBackColor = false;
+            this.BtCancelar.Click += new System.EventHandler(this.BtCancelar_Click);
             // 
-            // button3
+            // btModificar
             // 
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.button3.FlatAppearance.BorderSize = 3;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(878, 481);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 66);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Modificar Turno";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(9, 271);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 16);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "Sábado";
+            this.btModificar.BackColor = System.Drawing.Color.Black;
+            this.btModificar.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btModificar.FlatAppearance.BorderSize = 3;
+            this.btModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btModificar.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btModificar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btModificar.Location = new System.Drawing.Point(878, 404);
+            this.btModificar.Name = "btModificar";
+            this.btModificar.Size = new System.Drawing.Size(96, 66);
+            this.btModificar.TabIndex = 28;
+            this.btModificar.Text = "Modificar Turno";
+            this.btModificar.UseVisualStyleBackColor = false;
+            this.btModificar.Click += new System.EventHandler(this.btModificar_Click);
             // 
             // Turnero
             // 
@@ -443,9 +438,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1423, 578);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1424, 578);
+            this.Controls.Add(this.btModificar);
+            this.Controls.Add(this.BtCancelar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cmbDias);
@@ -507,8 +502,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtCancelar;
+        private System.Windows.Forms.Button btModificar;
     }
 }
 

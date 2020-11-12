@@ -11,27 +11,27 @@ namespace Datos
 {
     public class DatosTurno : DatosConexionDB
     {
-        public int AltaTurno(string accion, Turno turno)
+        public int AbmTurno(string accion, Turno objTurno)
         {
             int resultado = -1;
             string orden = string.Empty;
 
             if (accion == "Alta")
             {
-                orden = "Insert into Turno(Dia, Horario) values('" + turno.Dia + "', '" + turno.Horario + "')";
+                orden = "Insert into Turno(Dia, Horario) values('" + objTurno.Dia + "', '" + objTurno.Horario + "')";
             }
 
             if (accion == "Modificar")
             {
                 orden = "Update Turno set" 
-                    + " Dia = '" + turno.Dia + "," 
-                    + " Horario = '" + turno.Horario + "'"
-                    + " wheren Dia = " + turno.Horario + "' and '" + turno.Horario + "')";
+                    + " Dia = '" + objTurno.Dia + "'," 
+                    + " Horario = '" + objTurno.Horario + "'"
+                    + " where Dia = " + objTurno.Dia;
             }
 
             if (accion == "Cancelar")
             {
-                orden = "delete from Turno where Dia = " + turno.Dia + "' and '" + turno.Horario + "')";
+                orden = "delete from Turno where Dia = " + objTurno.Dia + "' and '" + objTurno.Horario + "')";
             }
 
             SqlCommand command = new SqlCommand(orden, cn);

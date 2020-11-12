@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Negocios;
 using Entidades;
 
 namespace Pelu_Shifts
@@ -60,7 +59,7 @@ namespace Pelu_Shifts
 
             objCliente.Nombre = txtCliente.Text;
 
-            objNegTurno.abmTurno(objTurno);
+            objNegTurno.abmTurno("Alta", objTurno);
             objNegCliente.abmCliente(objCliente);
 
             Turno turno = new Turno();
@@ -188,5 +187,41 @@ namespace Pelu_Shifts
 
         #endregion
 
+        private void btModificar_Click(object sender, EventArgs e) //NO FUNCIONA
+        {
+            //objTurno.Dia = cmbDias.SelectedItem.ToString();
+            //objTurno.Horario = cmbHorarios.SelectedItem.ToString();
+
+            //objCliente.Nombre = txtCliente.Text;
+
+            //objNegTurno.abmTurno("Modificar", objTurno);
+            //objNegCliente.abmCliente(objCliente);
+
+            //Turno turno = new Turno();
+            //turno.Dia = cmbDias.Text;
+            //turno.Horario = cmbHorarios.Text;
+
+            //Peluquero();
+            //ControlTxt();
+        }
+
+        private void BtCancelar_Click(object sender, EventArgs e) // NO ESTÁ TERMINADO
+        {
+            //objTurno.Dia = cmbDias.SelectedItem.ToString();
+            //objTurno.Horario = cmbHorarios.SelectedItem.ToString();
+
+            //objCliente.Nombre = txtCliente.Text;
+
+            //objNegTurno.abmTurno("Cancelar", objTurno);
+            //objNegCliente.abmCliente(objCliente);
+
+            //Turno turno = new Turno();
+            //turno.Dia = cmbDias.Text;
+            //turno.Horario = cmbHorarios.Text;
+
+            //Peluquero();
+            //ControlTxt();
+
+        }
     }
 }

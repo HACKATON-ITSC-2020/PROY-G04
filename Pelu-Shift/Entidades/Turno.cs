@@ -8,7 +8,15 @@ namespace Entidades
 {
     public class Turno
     {
-        public string Dia { get; set; }
-        public string Horario { get; set; }
+        private string dia;
+        private string horario;
+
+        public string Dia { get => dia; set => dia = value; }
+        public string Horario { get => horario; set => horario = value; }
+
+        public Turno()
+        {
+
+        }
     }
 }

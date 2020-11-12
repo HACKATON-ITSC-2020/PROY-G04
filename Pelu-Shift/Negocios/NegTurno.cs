@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,16 @@ namespace Negocios
 {
     public class NegTurno
     {
-        DatosTurno datosTurno = new DatosTurno();
+        DatosTurno objDT = new DatosTurno();
 
-        public int abmTurno(Turno objTurno)
+        public int abmTurno(string accion, Turno objTurno)
         {
-            return datosTurno.AltaTurno(objTurno);
+            return objDT.AbmTurno(accion, objTurno);
+        }
+
+        public DataSet ListarTurnos(string Cual)
+        {
+            return objDT.ListarTurnos(Cual);
         }
 
     }
